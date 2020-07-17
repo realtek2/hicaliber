@@ -13,6 +13,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'ImportCsvController@index')->name('import');
+Route::get('/import_data', 'ImportCsvController@import_data')->name('import_data');
