@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\ImportCsv;
+use App\Models\CsvData;
 use Illuminate\Http\Request;
 
-class ImportCsvController extends Controller
+class CsvDataController extends Controller
 {
     /**
      * Display a listing of the resource.
