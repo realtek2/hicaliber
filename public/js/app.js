@@ -1923,7 +1923,89 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      keywords: null,
+      results: []
+    };
+  },
+  watch: {
+    keywords: function keywords(after, before) {
+      this.fetch();
+    }
+  },
+  methods: {
+    fetch: function fetch() {
+      var _this = this;
+
+      axios.get('/api/csv_data', {
+        params: {
+          keywords: this.keywords
+        }
+      }).then(function (response) {
+        return _this.results = response.data;
+      })["catch"](function (error) {});
+    }
+  },
   mounted: function mounted() {
     console.log('Component mounted.');
   }
@@ -37523,32 +37605,269 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container" }, [
-      _c("div", { staticClass: "row justify-content-center" }, [
-        _c("div", { staticClass: "col-md-8" }, [
-          _c("div", { staticClass: "card" }, [
-            _c("div", { staticClass: "card-header" }, [
-              _vm._v("Example Component")
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "card-body" }, [
-              _vm._v(
-                "\n                    I'm an example component.\n                "
-              )
+  return _c("div", { staticClass: "container" }, [
+    _c("div", { staticClass: "row justify-content-center" }, [
+      _c("div", { staticClass: "col-md-12" }, [
+        _c("div", { staticClass: "card" }, [
+          _c("div", { staticClass: "card-header" }, [
+            _vm._v("Example Component")
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "card-body" }, [
+            _c("div", { staticClass: "row" }, [
+              _c("div", { staticClass: "col-md-2" }, [
+                _c("div", { staticClass: "form-group" }, [
+                  _c("label", [_vm._v("Name")]),
+                  _vm._v(" "),
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.keywords,
+                        expression: "keywords"
+                      }
+                    ],
+                    staticClass: "form-control",
+                    attrs: { type: "text", placeholder: "Type and wait!" },
+                    domProps: { value: _vm.keywords },
+                    on: {
+                      input: function($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.keywords = $event.target.value
+                      }
+                    }
+                  }),
+                  _vm._v(" "),
+                  _vm.results.length > 0
+                    ? _c(
+                        "ul",
+                        _vm._l(_vm.results, function(result) {
+                          return _c("li", {
+                            key: result.id,
+                            domProps: { textContent: _vm._s(result.name) }
+                          })
+                        }),
+                        0
+                      )
+                    : _vm._e()
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-md-2" }, [
+                _c("div", { staticClass: "form-group" }, [
+                  _c("label", [_vm._v("Price")]),
+                  _vm._v(" "),
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.keywords,
+                        expression: "keywords"
+                      }
+                    ],
+                    staticClass: "form-control",
+                    attrs: { type: "text", placeholder: "Type and wait!" },
+                    domProps: { value: _vm.keywords },
+                    on: {
+                      input: function($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.keywords = $event.target.value
+                      }
+                    }
+                  }),
+                  _vm._v(" "),
+                  _vm.results.length > 0
+                    ? _c(
+                        "ul",
+                        _vm._l(_vm.results, function(result) {
+                          return _c("li", {
+                            key: result.id,
+                            domProps: { textContent: _vm._s(result.price) }
+                          })
+                        }),
+                        0
+                      )
+                    : _vm._e()
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-md-2" }, [
+                _c("div", { staticClass: "form-group" }, [
+                  _c("label", [_vm._v("Bedrooms")]),
+                  _vm._v(" "),
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.keywords,
+                        expression: "keywords"
+                      }
+                    ],
+                    staticClass: "form-control",
+                    attrs: { type: "text", placeholder: "Type and wait!" },
+                    domProps: { value: _vm.keywords },
+                    on: {
+                      input: function($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.keywords = $event.target.value
+                      }
+                    }
+                  }),
+                  _vm._v(" "),
+                  _vm.results.length > 0
+                    ? _c(
+                        "ul",
+                        _vm._l(_vm.results, function(result) {
+                          return _c("li", {
+                            key: result.id,
+                            domProps: { textContent: _vm._s(result.bedrooms) }
+                          })
+                        }),
+                        0
+                      )
+                    : _vm._e()
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-md-2" }, [
+                _c("div", { staticClass: "form-group" }, [
+                  _c("label", [_vm._v("Bathrooms")]),
+                  _vm._v(" "),
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.keywords,
+                        expression: "keywords"
+                      }
+                    ],
+                    staticClass: "form-control",
+                    attrs: { type: "text", placeholder: "Type and wait!" },
+                    domProps: { value: _vm.keywords },
+                    on: {
+                      input: function($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.keywords = $event.target.value
+                      }
+                    }
+                  }),
+                  _vm._v(" "),
+                  _vm.results.length > 0
+                    ? _c(
+                        "ul",
+                        _vm._l(_vm.results, function(result) {
+                          return _c("li", {
+                            key: result.id,
+                            domProps: { textContent: _vm._s(result.bathrooms) }
+                          })
+                        }),
+                        0
+                      )
+                    : _vm._e()
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-md-2" }, [
+                _c("div", { staticClass: "form-group" }, [
+                  _c("label", [_vm._v("Storeys")]),
+                  _vm._v(" "),
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.keywords,
+                        expression: "keywords"
+                      }
+                    ],
+                    staticClass: "form-control",
+                    attrs: { type: "text", placeholder: "Type and wait!" },
+                    domProps: { value: _vm.keywords },
+                    on: {
+                      input: function($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.keywords = $event.target.value
+                      }
+                    }
+                  }),
+                  _vm._v(" "),
+                  _vm.results.length > 0
+                    ? _c(
+                        "ul",
+                        _vm._l(_vm.results, function(result) {
+                          return _c("li", {
+                            key: result.id,
+                            domProps: { textContent: _vm._s(result.storeys) }
+                          })
+                        }),
+                        0
+                      )
+                    : _vm._e()
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-md-2" }, [
+                _c("div", { staticClass: "form-group" }, [
+                  _c("label", [_vm._v("Garages")]),
+                  _vm._v(" "),
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.keywords,
+                        expression: "keywords"
+                      }
+                    ],
+                    staticClass: "form-control",
+                    attrs: { type: "text", placeholder: "Type and wait!" },
+                    domProps: { value: _vm.keywords },
+                    on: {
+                      input: function($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.keywords = $event.target.value
+                      }
+                    }
+                  }),
+                  _vm._v(" "),
+                  _vm.results.length > 0
+                    ? _c(
+                        "ul",
+                        _vm._l(_vm.results, function(result) {
+                          return _c("li", {
+                            key: result.id,
+                            domProps: { textContent: _vm._s(result.garages) }
+                          })
+                        }),
+                        0
+                      )
+                    : _vm._e()
+                ])
+              ])
             ])
           ])
         ])
       ])
     ])
-  }
-]
+  ])
+}
+var staticRenderFns = []
 render._withStripped = true
 
 
