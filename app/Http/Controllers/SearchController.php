@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\CsvData;
 use App\Http\Filters\CsvDataFilter;
-use Illuminate\Http\Request;
 
 class SearchController extends Controller
 {
@@ -13,11 +12,10 @@ class SearchController extends Controller
         return view('search');
     }
     
-    public function name(Request $request)
+    public function search(CsvDataFilter $csvDataFilter)
     {
-        $data = CsvData::where('name', $request->keywords)->get();
+        $datas = CsvData::filter($csvDataFilter)->get();
 
-        return response()->json($data);
+        return response()->json($datas);
     }
-
 }

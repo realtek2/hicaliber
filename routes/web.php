@@ -14,4 +14,4 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'SearchController@index')->name('import');
-Route::get('/api/csv_data', 'SearchController@name');
+Route::get('/api/csv_data', 'SearchController@search');
